@@ -1,0 +1,61 @@
+{
+  "name": "@lattice/configurer",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "keywords": [
+    "lattice",
+    "backend",
+    "web",
+    "restful",
+    "rest",
+    "framework",
+    "api",
+    "app"
+  ],
+  "repository": "lattice-boot/configurer",
+  "scripts": {
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./ -o ./dist",
+    "test": "jest",
+    "test:cov": "jest --coverage --coverageReporters text-summary"
+  },
+  "devDependencies": {
+    "@lattice/core": "0.0.1",
+    "@types/jest": "^24.0.11",
+    "@types/js-yaml": "^3.12.1",
+    "@types/mock-fs": "^3.6.30",
+    "@types/node": "^11.13.7",
+    "jest": "^24.7.1",
+    "mock-fs": "^4.10.1",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.1.0",
+    "tsconfig-paths": "^3.8.0",
+    "tscpaths": "0.0.7",
+    "typescript": "^3.4.5"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": ".",
+    "testRegex": ".spec.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "@configurer/(.*)": "<rootDir>/src/$1"
+    }
+  },
+  "peerDependencies": {
+    "@lattice/core": "0.0.1"
+  },
+  "author": "noir-lattice",
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^3.13.1"
+  }
+}
